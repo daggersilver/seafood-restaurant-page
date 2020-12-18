@@ -1,0 +1,232 @@
+html *{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:  0 0 5px 0px rgb(168, 167, 167);
+}
+.logo-con{
+    display: block;
+    background:  url(images/logo.jpg) center no-repeat;
+    background-size: contain;
+    height: 90%;
+    width: 100px;
+}
+.nav-links{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-links a{
+    text-decoration: none;
+    color: red;
+    margin: 0 2vw;
+    font-size: 20px;
+    transition: color 0.5s;
+}
+.nav-links a:hover{
+    color: rgb(58, 57, 57);
+}
+#home{
+    margin-top: 50px;
+    width: 100%;
+    height: 100vh;
+    height: calc(100vh - 50px);
+    background: linear-gradient(rgba(8, 199, 247, 0.658), rgba(180, 36, 16, 0.356)), url(images/banner.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#home h1{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    font-size: 7.5vw;
+    line-height: 8vw;
+    width: 70%;
+}
+#home i{
+    margin-left: 3vw;
+}
+footer{
+    width: 100%;
+    height: 20vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    color: white;
+    font-size: 2vw;
+    margin-bottom: 2vw;
+}
+footer span a{
+    color: white;
+    font-size: 3vw;
+    margin: 1vw;
+    transition: color 0.5s;
+}
+footer a:hover{
+    color: red;
+}
+
+#grid-menu{
+    margin-top: 5vw;
+    display: grid;
+    column-gap: 8%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+#menu{
+    box-sizing: border-box;
+    padding: 10%;
+    height: max-content;
+    padding-bottom: 10vw;
+}
+#menu h1{
+    text-align: center;
+    margin-top: 5vw;
+    font-size: 5vw;
+    color: rgb(122, 126, 126);
+    font-family: 'Times New Roman', Times, serif;
+}
+.menu-tile h2{
+    margin-top: 1vw;
+    margin-left: 1vw;
+    font-size: 2.5vw;
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    width: fit-content;
+    padding-bottom: 5px;
+    border-bottom: 3px solid red;
+}
+.menu-tile img{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+}
+.menu-tile {
+    height: 25vw;
+    box-shadow: 0 0 10px 2px gray;
+    margin-bottom: 5vw;
+}
+#contact-div{
+    width: 500px;
+    height: 50vh;
+    padding: 5%;
+    background-color: rgb(184, 187, 184);
+    margin: 25vh auto;
+}
+#contact-div form{
+    width: 100%;
+    height: 60%;
+    background-color: rgb(226, 228, 222);
+}
+#contact-div h1{
+    color: rgb(1, 1, 49);
+    margin-bottom: 30px;
+    padding-top: 15px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+form div{
+    display: flex;
+    width: 80%;
+    margin: 10px auto;
+    height: 40px;
+}
+form{
+    margin-bottom: 70px;
+}
+form input[type="email"]{
+    width: 75%;
+    font-size: 20px;
+    padding-left: 5%;
+    border: 2px solid rgb(12, 2, 54);
+}
+form input[type="submit"]{
+    width: 20%;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(9, 1, 53);
+    color: white;
+    border: 1px solid black;
+}
+#contact-div p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.8vw;
+    word-spacing: 1vw;
+    margin: 10px auto;
+}
+form input[type="submit"]:hover{
+    background-color: red;
+    border: 2px solid red;
+}
+
+@media (max-width:700px){
+    .nav-links{
+        width: auto;
+    }
+    .nav-links a{
+        font-size: 4vw;
+    }
+    #grid-menu{
+        margin: 20px auto;
+        width: 70%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+    .menu-tile{
+        height: auto;
+        margin-bottom: 30px;
+    }
+    #menu h1{
+        margin:  50px auto 25px auto;
+    }
+    #contact-div{
+        width: 90%;
+        height: 400px;
+    }
+    form{
+        position: relative;
+    }
+    form div{
+        width: 90%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    form input[type="email"]{
+        width: 65%;
+        font-size: 5vw;
+        padding-left: 5%;
+    }
+    form input[type="submit"]{
+        width: 30%;
+        font-size: 4vw;
+    }
+    #contact-div p{
+        font-size: 6vw;
+        letter-spacing: 0.8vw;
+        word-spacing: 1vw;
+    }
+}
